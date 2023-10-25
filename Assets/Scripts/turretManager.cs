@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class turretManager : MonoBehaviour
 {
-    private Collider2D target = null;
-
-    private GameObject bullet;
+    public Collider2D target = null;
+    private static turretManager TM;
+    public GameObject bullet;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class turretManager : MonoBehaviour
     {
         if (target != null)
         {
-            Instantiate(bullet, transform.position, Quaternion.identity);
+            Instantiate(bullet, new Vector3(1, 0, 0 ), Quaternion.identity);
         }
     }
 
