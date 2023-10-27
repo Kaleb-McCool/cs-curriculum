@@ -41440,6 +41440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2b4adcffa33f4f11851a3834f0e5e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 1750497390}
   bullet: {fileID: 5790822057519619805, guid: d181d0f6b0e116b4298e1e64b89f707e, type: 3}
 --- !u!1 &1350614017
 GameObject:
@@ -85257,6 +85258,12 @@ MonoBehaviour:
   yDirection: 0
   xVector: 0
   yVector: 0
+--- !u!61 &1750497390 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 412193027009803664, guid: 34448014912494d33b041af48acd0291,
+    type: 3}
+  m_PrefabInstance: {fileID: 1750497383}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1825907749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4281311786053241907, guid: 69c7343f050914c7787bbbe42c07b5b8,

@@ -7,10 +7,13 @@ public class turretManager : MonoBehaviour
     public Collider2D target = null;
     private static turretManager TM;
     public GameObject bullet;
+    public float FireCooldown;
+
+    public float OrigFireCooldown;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Fire
     }
 
     // Update is called once per frame
@@ -18,7 +21,8 @@ public class turretManager : MonoBehaviour
     {
         if (target != null)
         {
-            Instantiate(bullet, new Vector3(1, 0, 0 ), Quaternion.identity);
+            
+           var CR =  Instantiate(bullet, new Vector3(1, 0, 0 ), Quaternion.identity);
         }
     }
 

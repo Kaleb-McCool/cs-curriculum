@@ -44,6 +44,7 @@ public class CaveMovement : MonoBehaviour
         xVector = xDirection * xWalkingSpeed * Time.deltaTime;
         yVector = yDirection * yWalkingSpeed * Time.deltaTime;
         transform.position = transform.position + new Vector3(xVector, yVector, 0);
+        
        
     }
 }
