@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -5,22 +6,25 @@ using UnityEngine;
 
 public class TurretBulletMove : MonoBehaviour
 {
-    public float speed = 2.0f;
+    private Vector3 initialPlayerPosition; // Initial position of the player when the bullet is created
+    public float speed = 10.0f; // The speed at which the bullet moves
 
-    
-    public GameObject Player;
-    
-
-    
-    // Start is called before the first frame update
-    void Start()
+    // This function is called when you instantiate the bullet
+    public void Initialize(Vector3 playerPosition)
     {
+        initialPlayerPosition = playerPosition;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position,Player.transform.position , step );
+        // Calculate the direction from the bullet to the initial player position
+        Vector3 direction = initialPlayerPosition - transform.position;
+
+        // Use Vector2.MoveTowards to move the bullet towards the initial player position
+        Vector3 newPosition = Vector2.MoveTowards(transform.position, initialPlayerPosition, speed * Time.deltaTime);
+
+        // Update the bullet's position
+        transform.position = new Vector3(newPosition.x, newPosition.y, transform.position.z);
     }
 }
+   

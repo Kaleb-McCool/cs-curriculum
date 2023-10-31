@@ -13,16 +13,20 @@ public class turretManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Fire
+        OrigFireCooldown = 3.0f;
+        FireCooldown = OrigFireCooldown;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (target != null)
+        FireCooldown = FireCooldown - Time.deltaTime;
+        if (target != null && FireCooldown <= 0)
         {
             
-           var CR =  Instantiate(bullet, new Vector3(1, 0, 0 ), Quaternion.identity);
+           var CR =  Instantiate(bullet, transform.position, Quaternion.identity);
+           FireCooldown = OrigFireCooldown;
         }
     }
 
