@@ -40180,7 +40180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -640.5, y: 306.5}
+  m_AnchoredPosition: {x: -433, y: 180}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &559073837
@@ -40329,6 +40329,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2399072710900510365, guid: fbdc99957549444bfba281e61d9d218c,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.704175
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399072710900510365, guid: fbdc99957549444bfba281e61d9d218c,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.124981
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399072710900510365, guid: fbdc99957549444bfba281e61d9d218c,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0032610893
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399072710900510365, guid: fbdc99957549444bfba281e61d9d218c,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.010082543
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399072710900510365, guid: fbdc99957549444bfba281e61d9d218c,
+        type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3736838050167469039, guid: fbdc99957549444bfba281e61d9d218c,
         type: 3}
       propertyPath: m_Name
@@ -40395,7 +40420,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3736838050167469039, guid: fbdc99957549444bfba281e61d9d218c,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1271915902}
+      addedObject: {fileID: 1271915904}
   m_SourcePrefab: {fileID: 100100000, guid: fbdc99957549444bfba281e61d9d218c, type: 3}
 --- !u!1 &747287426
 GameObject:
@@ -41477,102 +41502,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 711718887}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &1271915902
-AudioSource:
+--- !u!114 &1271915904
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271915898}
   m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 81ce580cdf838435f9121edfa9437650, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5257bba40940c364e993a6098c3fef0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  FollowActive: 0
+  enemyAwareness: 0
+  MaxEnemyAwarenessTime: 0
+  enemyAwarenessTime: 0
+  enemySpeed: {x: 0, y: 0}
+  EnemyMoveSpeed: 0
 --- !u!1 &1325156265 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6040774585044851471, guid: 54f2fe71921990e48b811a0b3b35835f,
@@ -41624,10 +41572,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2b4adcffa33f4f11851a3834f0e5e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 812896642596040205, guid: d181d0f6b0e116b4298e1e64b89f707e,
+    type: 3}
   target: {fileID: 1750497390}
   bullet: {fileID: 5790822057519619805, guid: d181d0f6b0e116b4298e1e64b89f707e, type: 3}
   FireCooldown: 2
   OrigFireCooldown: 2
+  Active: 0
 --- !u!1 &1350614017
 GameObject:
   m_ObjectHideFlags: 0
@@ -84523,7 +84474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -674.72437, y: 352.87485}
+  m_AnchoredPosition: {x: -473, y: 236}
   m_SizeDelta: {x: 131.5583, y: 42.7586}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1378522826
@@ -84555,8 +84506,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280493000
-  m_fontColor: {r: 0.7830189, g: 0.13665895, b: 0.13665895, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -86133,7 +86084,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 4.37
 --- !u!4 &2020212485 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4281311786053241907, guid: 69c7343f050914c7787bbbe42c07b5b8,

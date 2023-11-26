@@ -3,28 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class TurretBulletMove : MonoBehaviour
 {
-    private Vector3 initialPlayerPosition; // Initial position of the player when the bullet is created
-    public float speed = 10.0f; // The speed at which the bullet moves
-
-    // This function is called when you instantiate the bullet
-    public void Initialize(Vector3 playerPosition)
-    {
-        initialPlayerPosition = playerPosition;
-    }
+    public Vector2 bulletSpeed;
+    
 
     void Update()
     {
-        // Calculate the direction from the bullet to the initial player position
-        Vector3 direction = initialPlayerPosition - transform.position;
-
-        // Use Vector2.MoveTowards to move the bullet towards the initial player position
-        Vector3 newPosition = Vector2.MoveTowards(transform.position, initialPlayerPosition, speed * Time.deltaTime);
-
-        // Update the bullet's position
-        transform.position = new Vector3(newPosition.x, newPosition.y, transform.position.z);
+        transform.Translate(bulletSpeed*Time.deltaTime);
+        //Mouses position in the "real world"? EDIT: The "Real World" is the games coordinate plane where as originaly it is the pixel location
+       //Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+       //mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
+       //transform.position = mousePosition;
+      
     }
 }
    
