@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -28,39 +29,34 @@ public class EnemyMovement : MonoBehaviour
     {
         if (enemyAwareness == true)
         {
+            // radius up
             enemyAwarenessTime= enemyAwarenessTime- Time.deltaTime;
         }
         transform.Translate(enemySpeed*Time.deltaTime);
-        if (FollowActive == true)
-        {
-            if (target != null)
-            { 
-                enemySpeed = ((target.gameObject.transform.position - transform.position).normalized * EnemyMoveSpeed);
-            
-            }
-        }
        
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    
+        
+    
+
+    public void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            target = other;
-            FollowActive = true;
             EnemyMoveSpeed = 3;
+            target = other;
+            enemySpeed = ((target.gameObject.transform.position - transform.position).normalized * EnemyMoveSpeed);
         }
-        
     }
 
     public void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            target = null;
-            FollowActive = false;
-            enemyAwareness = true;
-            EnemyMoveSpeed = -Time.deltaTime;
+           target = null;
+           enemyAwareness = true;
+           enemySpeed = transform.position;
         }
             
 
