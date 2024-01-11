@@ -133,7 +133,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e12c373141dfc49e8a670884a3147814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  TurretBulletHalfLife: 1.9
-  turretBullet: {fileID: 5790822057519619805}
-  player: {fileID: 412193027009803667, guid: 34448014912494d33b041af48acd0291, type: 3}
+  bulletSpeed: {x: 0, y: 0}

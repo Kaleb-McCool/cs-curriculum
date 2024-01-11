@@ -56,7 +56,7 @@ public class EnemyMovement : MonoBehaviour
         {
            target = null;
            enemyAwareness = true;
-           enemySpeed = transform.position;
+           enemySpeed = new Vector2(0,0);
         }
             
 

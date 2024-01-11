@@ -17,15 +17,15 @@ public class PlayerBulletMovement : MonoBehaviour
 
     void Start()
     {
-        PbulletSpeed = 5.0f;
+        
         
 
         // Update is called once per frame
         void Update()
         {
             Mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            transform.position = Vector2.MoveTowards(transform.position, Mouse, PbulletSpeed * Time.deltaTime);
+            p.bulletSpeed = ((Mouse - transform.position).normalized * 7);
+            PbulletSpeed = Mouse - transform.position * Time.deltaTime;
 
         }
     }

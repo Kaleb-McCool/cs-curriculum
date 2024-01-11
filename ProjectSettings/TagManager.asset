@@ -9,6 +9,8 @@ TagManager:
   - Axe
   - Spikes
   - HealingCross
+  - turretBullet
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX

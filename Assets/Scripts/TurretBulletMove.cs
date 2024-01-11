@@ -13,10 +13,7 @@ public class TurretBulletMove : MonoBehaviour
     void Update()
     {
         transform.Translate(bulletSpeed*Time.deltaTime);
-        //Mouses position in the "real world"? EDIT: The "Real World" is the games coordinate plane where as originaly it is the pixel location
-       //Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-       //mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
-       //transform.position = mousePosition;
+       
       
     }
 }
