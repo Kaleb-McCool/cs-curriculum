@@ -6,6 +6,9 @@ using UnityEngine;
 public class PlayerBulletShoot : MonoBehaviour
 {
     public GameObject PlayerBullet;
+    public PlayerBulletMovement bullet;
+
+    public Cursorloc Cursorloc;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +20,8 @@ public class PlayerBulletShoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Instantiate(PlayerBullet, transform.position, Quaternion.identity);
+            bullet = Instantiate(this.bullet, transform.position, UnityEngine.Quaternion.identity);
+            bullet.PbulletSpeed = ((Cursorloc.mousePos - transform.position).normalized*.001f);
         }
     }
 }

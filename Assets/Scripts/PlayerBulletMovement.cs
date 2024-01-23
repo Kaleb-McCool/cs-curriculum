@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerBulletMovement : MonoBehaviour
 {
-    public float PbulletSpeed;
+    public Vector2 PbulletSpeed;
     private Vector2 Mouse;
 
     // Start is called before the first frame update
@@ -23,10 +23,7 @@ public class PlayerBulletMovement : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
-            Mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            p.bulletSpeed = ((Mouse - transform.position).normalized * 7);
-            PbulletSpeed = Mouse - transform.position * Time.deltaTime;
-
+            transform.Translate(PbulletSpeed * Time.deltaTime); 
         }
     }
 }

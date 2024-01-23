@@ -85403,6 +85403,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerBullet: {fileID: 4300925077897744217, guid: c5252ae9f4db9c54f98a7ac62d8ae9ad,
     type: 3}
+  bullet: {fileID: 4674813901962599028, guid: c5252ae9f4db9c54f98a7ac62d8ae9ad, type: 3}
+  Cursorloc: {fileID: 0}
 --- !u!4 &1825907749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4281311786053241907, guid: 69c7343f050914c7787bbbe42c07b5b8,

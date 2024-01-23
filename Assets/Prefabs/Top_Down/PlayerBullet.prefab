@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8263485223766787325}
   - component: {fileID: 4431652134218458124}
   - component: {fileID: 4674813901962599028}
+  - component: {fileID: 1611604582996350417}
   m_Layer: 0
   m_Name: PlayerBullet
   m_TagString: PlayerBullet
@@ -97,4 +98,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44fc2204f6eb72419cf7e909923f7f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PbulletSpeed: 0
+  PbulletSpeed: {x: 0, y: 0}
+--- !u!114 &1611604582996350417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4300925077897744217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3edfc6d510fcc443089ff42f2382effc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mousePos: {x: 0, y: 0, z: 0}
+  moveSpeed: 0.1
