@@ -21,8 +21,9 @@ public class AxeVSdoor : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Alex") && Input.GetKeyDown(KeyCode.T))
+        if (other.CompareTag("Alex") && Input.GetKeyDown(KeyCode.O))
         {
+            Debug.Log("Meesa want cheeesew");
             Destroy(gameObject);
         }
     }

@@ -15,11 +15,12 @@ public class CaveMovement : MonoBehaviour
     public float yVector;
 
     private Scene scene;
-    // Start is called before the first frame update
+    private Rigidbody2D rb;
     void Start()
     {
         xWalkingSpeed = 4;
-        yWalkingSpeed = 4;  
+        yWalkingSpeed = 4;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -44,7 +45,10 @@ public class CaveMovement : MonoBehaviour
         xVector = xDirection * xWalkingSpeed * Time.deltaTime;
         yVector = yDirection * yWalkingSpeed * Time.deltaTime;
         transform.position = transform.position + new Vector3(xVector, yVector, 0);
-        
-       
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            rb.AddForce(transform.up * 5f, ForceMode.Force);
+        }
     }
 }
