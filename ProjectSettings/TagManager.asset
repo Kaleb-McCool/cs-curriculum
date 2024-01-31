@@ -11,6 +11,7 @@ TagManager:
   - HealingCross
   - turretBullet
   - PlayerBullet
+  - Alex
   layers:
   - Default
   - TransparentFX

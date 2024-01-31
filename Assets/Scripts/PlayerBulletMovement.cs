@@ -8,6 +8,7 @@ public class PlayerBulletMovement : MonoBehaviour
     public Vector2 PbulletSpeed;
     private Vector2 Mouse;
 
+    public Cursorloc Cursorloc;
     // Start is called before the first frame update
 
     private void Awake()
@@ -20,10 +21,12 @@ public class PlayerBulletMovement : MonoBehaviour
         
         
 
-        // Update is called once per frame
-        void Update()
-        {
-            transform.Translate(PbulletSpeed * Time.deltaTime); 
-        }
+       
+    }
+    
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Translate(PbulletSpeed * Time.deltaTime); 
     }
 }

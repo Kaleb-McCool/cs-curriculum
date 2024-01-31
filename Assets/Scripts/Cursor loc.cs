@@ -5,8 +5,9 @@ using UnityEngine;
 public class Cursorloc : MonoBehaviour
 {
     public Vector3 mousePos;
-    public float moveSpeed = 0.001f;
-    
+    public float moveSpeed = 10f;
+
+    public Vector2 direction;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,10 @@ public class Cursorloc : MonoBehaviour
     {
         mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-        transform.position = Vector2.Lerp(transform.position, mousePos, moveSpeed);
+        transform.position = Vector2.Lerp(transform.position, mousePos, moveSpeed*Time.deltaTime);
+        
+        {
+            
+        }
     }
 }
