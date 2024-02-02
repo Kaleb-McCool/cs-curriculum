@@ -484,9 +484,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: 0
-  health: 100
-  coinText: {fileID: 559073837}
-  healthText: {fileID: 1378522826}
+  health: 0
+  coinText: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!1001 &396992123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41476,12 +41476,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2b4adcffa33f4f11851a3834f0e5e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 812896642596040205, guid: d181d0f6b0e116b4298e1e64b89f707e,
-    type: 3}
-  target: {fileID: 1750497390}
-  bullet: {fileID: 5790822057519619805, guid: d181d0f6b0e116b4298e1e64b89f707e, type: 3}
-  FireCooldown: 2
-  OrigFireCooldown: 2
+  bulletPrefab: {fileID: 0}
+  target: {fileID: 0}
+  bullet: {fileID: 0}
+  FireCooldown: 0
+  OrigFireCooldown: 0
   Active: 0
 --- !u!1 &1350614017
 GameObject:
@@ -85294,7 +85293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f68b1b375794f329e3289f93978967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iFrames: 1
+  iFrames: 0
 --- !u!114 &1750497388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85307,7 +85306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617c579ee89eb428bbb88d5f8a2e502c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinValue: 5
+  coinValue: 0
 --- !u!114 &1750497389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85321,18 +85320,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cave: 0
-  xWalkingSpeed: 8
-  yWalkingSpeed: 8
+  xWalkingSpeed: 0
+  yWalkingSpeed: 0
   xDirection: 0
   yDirection: 0
   xVector: 0
   yVector: 0
---- !u!61 &1750497390 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 412193027009803664, guid: 34448014912494d33b041af48acd0291,
-    type: 3}
-  m_PrefabInstance: {fileID: 1750497383}
-  m_PrefabAsset: {fileID: 0}
+  jumpcont: 0
+  onground: 0
 --- !u!114 &1750497393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85345,9 +85340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82827fe6596f4f44d89d24b8da285fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerBullet: {fileID: 4300925077897744217, guid: c5252ae9f4db9c54f98a7ac62d8ae9ad,
-    type: 3}
-  bullet: {fileID: 1799652689158015278, guid: c5252ae9f4db9c54f98a7ac62d8ae9ad, type: 3}
+  PlayerBullet: {fileID: 0}
+  bullet: {fileID: 0}
   Cursorloc: {fileID: 0}
 --- !u!114 &1750497396
 MonoBehaviour:

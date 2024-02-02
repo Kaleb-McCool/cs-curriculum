@@ -13,42 +13,48 @@ public class CaveMovement : MonoBehaviour
     public float yDirection;
     public float xVector;
     public float yVector;
+    public int jumpcont;
 
     private Scene scene;
     private Rigidbody2D rb;
+    public bool onground = false;
     void Start()
     {
         xWalkingSpeed = 4;
         yWalkingSpeed = 4;
         rb = GetComponent<Rigidbody2D>();
+        jumpcont = 1;
+        string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        if (currentScene == "OverWorld")
+        {
+            yWalkingSpeed = 0;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        if (currentScene == "OverWorld")
+        onground = Physics2D.Raycast(transform.position, Vector2.down, 1f, LayerMask.GetMask("Ground"));
+        if (onground)
         {
-            cave = false;
-        }
-        else
-        {
-            cave = false;
+            jumpcont = 1;
         }
 
-        //if (cave)
-        //{
-            
-        //}
+
+
         xDirection = Input.GetAxis("Horizontal");
-        yDirection = Input.GetAxis("Vertical");
-        xVector = xDirection * xWalkingSpeed * Time.deltaTime;
-        yVector = yDirection * yWalkingSpeed * Time.deltaTime;
-        transform.position = transform.position + new Vector3(xVector, yVector, 0);
-
-        if (Input.GetKey(KeyCode.Space))
-        {
-            rb.AddForce(transform.up * 5f, ForceMode.Force);
+            yDirection = Input.GetAxis("Vertical");
+            xVector = xDirection * xWalkingSpeed * Time.deltaTime;
+            yVector = yDirection * yWalkingSpeed * Time.deltaTime;
+            transform.position = transform.position + new Vector3(xVector, yVector, 0);
+            if (Input.GetKey(KeyCode.Space) && jumpcont == 1)
+            {
+                rb.AddForce(transform.up * 10f);
+                jumpcont--;
+            }
         }
+        
+
+        
     }
-}
+
