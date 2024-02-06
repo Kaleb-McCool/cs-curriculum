@@ -21,7 +21,7 @@ public class PlayerBulletShoot : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             bullet = Instantiate(this.bullet, transform.position, UnityEngine.Quaternion.identity);
-            bullet.PbulletSpeed = ((Cursorloc.mousePos - transform.position) * 12);
+            
         }
     }
 }

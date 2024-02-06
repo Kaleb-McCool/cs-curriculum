@@ -485,8 +485,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coins: 0
   health: 0
-  coinText: {fileID: 0}
-  healthText: {fileID: 0}
+  coinText: {fileID: 559073837}
+  healthText: {fileID: 1378522826}
 --- !u!1001 &396992123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40180,7 +40180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -433, y: 180}
+  m_AnchoredPosition: {x: -433, y: 173}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &559073837
@@ -41476,9 +41476,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2b4adcffa33f4f11851a3834f0e5e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 812896642596040205, guid: d181d0f6b0e116b4298e1e64b89f707e,
+    type: 3}
   target: {fileID: 0}
-  bullet: {fileID: 0}
+  bullet: {fileID: 5790822057519619805, guid: d181d0f6b0e116b4298e1e64b89f707e, type: 3}
   FireCooldown: 0
   OrigFireCooldown: 0
   Active: 0
@@ -84377,7 +84378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -473, y: 236}
+  m_AnchoredPosition: {x: -472, y: 223}
   m_SizeDelta: {x: 131.5583, y: 42.7586}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1378522826
@@ -85327,6 +85328,7 @@ MonoBehaviour:
   xVector: 0
   yVector: 0
   jumpcont: 0
+  axe: {fileID: 8928701524657299959, guid: 2d2bc4cf5fda5c740b9cedcdbc7c87ac, type: 3}
   onground: 0
 --- !u!114 &1750497393
 MonoBehaviour:
@@ -85340,8 +85342,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82827fe6596f4f44d89d24b8da285fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerBullet: {fileID: 0}
-  bullet: {fileID: 0}
+  PlayerBullet: {fileID: 4300925077897744217, guid: c5252ae9f4db9c54f98a7ac62d8ae9ad,
+    type: 3}
+  bullet: {fileID: 1799652689158015278, guid: c5252ae9f4db9c54f98a7ac62d8ae9ad, type: 3}
   Cursorloc: {fileID: 0}
 --- !u!114 &1750497396
 MonoBehaviour:

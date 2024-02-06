@@ -40,7 +40,12 @@ public class turretManager : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            target = other;
+            Active = true;
+            FireCooldown = OrigFireCooldown;
+        }
     }
 
     public void OnTriggerExit2D(Collider2D other)

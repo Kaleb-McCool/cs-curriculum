@@ -5,10 +5,7 @@ using UnityEngine;
 
 public class PlayerBulletMovement : MonoBehaviour
 {
-    public Vector2 PbulletSpeed;
-    private Vector2 Mouse;
-
-    public Cursorloc Cursorloc;
+    public float speed = 5f;
     // Start is called before the first frame update
 
     private void Awake()
@@ -27,6 +24,10 @@ public class PlayerBulletMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(PbulletSpeed * Time.deltaTime); 
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 direction = mousePos - transform.position;
+        direction.z = 0;
+        direction.Normalize();
+        transform.Translate(direction * speed * Time.deltaTime); 
     }
 }

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,6 +16,8 @@ public class CaveMovement : MonoBehaviour
     public float xVector;
     public float yVector;
     public int jumpcont;
+    public GameObject axe;
+    public bool axehave;
 
     private Scene scene;
     private Rigidbody2D rb;
@@ -52,9 +56,12 @@ public class CaveMovement : MonoBehaviour
                 rb.AddForce(transform.up * 10f);
                 jumpcont--;
             }
-        }
-        
 
-        
+            if (Input.GetKey(KeyCode.O) && axehave &&)
+            {
+                Instantiate(axe, transform.position, quaternion.identity);
+            }
     }
+
+   
 
