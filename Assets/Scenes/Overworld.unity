@@ -85271,10 +85271,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1750497393}
-    - targetCorrespondingSourceObject: {fileID: 412193027009803667, guid: 34448014912494d33b041af48acd0291,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1750497396}
   m_SourcePrefab: {fileID: 100100000, guid: 34448014912494d33b041af48acd0291, type: 3}
 --- !u!1 &1750497384 stripped
 GameObject:
@@ -85329,6 +85325,8 @@ MonoBehaviour:
   yVector: 0
   jumpcont: 0
   axe: {fileID: 8928701524657299959, guid: 2d2bc4cf5fda5c740b9cedcdbc7c87ac, type: 3}
+  axehave: 0
+  axehere: 0
   onground: 0
 --- !u!114 &1750497393
 MonoBehaviour:
@@ -85346,19 +85344,6 @@ MonoBehaviour:
     type: 3}
   bullet: {fileID: 1799652689158015278, guid: c5252ae9f4db9c54f98a7ac62d8ae9ad, type: 3}
   Cursorloc: {fileID: 0}
---- !u!114 &1750497396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750497384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17596989fb5294dbea8eb6fc3ab984c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axehas: 0
 --- !u!4 &1825907749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4281311786053241907, guid: 69c7343f050914c7787bbbe42c07b5b8,

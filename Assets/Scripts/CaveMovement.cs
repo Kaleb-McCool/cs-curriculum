@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,11 +18,13 @@ public class CaveMovement : MonoBehaviour
     public float yVector;
     public int jumpcont;
     public GameObject axe;
-    public bool axehave;
+    public bool axehave = false;
+    public bool axehere = false;
 
     private Scene scene;
     private Rigidbody2D rb;
     public bool onground = false;
+
     void Start()
     {
         xWalkingSpeed = 4;
@@ -47,21 +50,34 @@ public class CaveMovement : MonoBehaviour
 
 
         xDirection = Input.GetAxis("Horizontal");
-            yDirection = Input.GetAxis("Vertical");
-            xVector = xDirection * xWalkingSpeed * Time.deltaTime;
-            yVector = yDirection * yWalkingSpeed * Time.deltaTime;
-            transform.position = transform.position + new Vector3(xVector, yVector, 0);
-            if (Input.GetKey(KeyCode.Space) && jumpcont == 1)
-            {
-                rb.AddForce(transform.up * 10f);
-                jumpcont--;
-            }
+        yDirection = Input.GetAxis("Vertical");
+        xVector = xDirection * xWalkingSpeed * Time.deltaTime;
+        yVector = yDirection * yWalkingSpeed * Time.deltaTime;
+        transform.position = transform.position + new Vector3(xVector, yVector, 0);
+        if (Input.GetKey(KeyCode.Space) && jumpcont == 1)
+        {
+            rb.AddForce(transform.up * 10f);
+            jumpcont--;
+        }
 
-            if (Input.GetKey(KeyCode.O) && axehave &&)
-            {
-                Instantiate(axe, transform.position, quaternion.identity);
-            }
+        if (Input.GetKey(KeyCode.O) && axehave && !axehere)
+        {
+            Instantiate(axe, transform.position, quaternion.identity);
+            axehere = true;
+        }
+
+
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Axe"))
+        {
+            axehave = true;
+            
+        }
+    }
+}
 
    
 

@@ -21,10 +21,7 @@ public class AxeVSdoor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("alex"))
-        {
-            Debug.Log("Meesa want cheeesew");
-        }
+        Debug.Log("here");
     }
 }       
 
